@@ -1,0 +1,41 @@
+====================================================================
+PARCHE para backend/app/main.py  —  Ejercicio 04 Tablero Kanban
+====================================================================
+
+1. Copiar kanban.py a la carpeta backend/app/ del VPS
+   (al lado de main.py y dibujo.py si existe)
+
+2. Agregar al FINAL de backend/app/main.py estas dos lineas:
+
+    from .kanban import router as kanban_router
+    app.include_router(kanban_router)
+
+3. Ejecutar el SQL de las tablas nuevas en MySQL:
+
+    docker-compose exec db mysql -u poo_user -ppoo_pass vps-poo \
+        < db/kanban_tables.sql
+
+   (o copiar el archivo al VPS y ejecutarlo desde ahi)
+
+4. Reiniciar el backend:
+
+    docker-compose restart backend
+
+5. Verificar que los endpoints esten disponibles:
+
+    curl -k -u poo:clavepoo https://167.86.77.220/api/kanban/board
+
+   Debe devolver: []  (arreglo vacio si no hay datos aun)
+
+====================================================================
+Endpoints disponibles tras el parche:
+  GET    /api/kanban/board
+  POST   /api/kanban/columns
+  PUT    /api/kanban/columns/{id}
+  DELETE /api/kanban/columns/{id}
+  POST   /api/kanban/cards
+  PUT    /api/kanban/cards/{id}
+  DELETE /api/kanban/cards/{id}
+  PUT    /api/kanban/cards/{id}/move
+  PUT    /api/kanban/columns/{id}/reorder
+====================================================================

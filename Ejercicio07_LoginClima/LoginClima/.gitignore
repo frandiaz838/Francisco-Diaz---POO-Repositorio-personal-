@@ -1,0 +1,5 @@
+build/
+.qtc_clangd/
+.claude/
+*.user
+app.log
