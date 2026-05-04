@@ -1,0 +1,35 @@
+# Qt user files
+*.pro.user*
+*.user
+*.user.*
+*.autosave
+
+# Build folders
+build/
+build-*/
+debug/
+release/
+
+# Compiled files
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.a
+*.lib
+
+# Qt generated files
+moc_*
+qrc_*
+ui_*
+
+# IDE configs
+.vscode/
+.idea/
+*.creator.user
+*.creator
+
+# OS files
+.DS_Store
+Thumbs.db
