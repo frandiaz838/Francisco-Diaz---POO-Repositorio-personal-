@@ -1,0 +1,8 @@
+build/
+*.user
+*.autosave
+.qtc_clangd/
+.qtcreator/
+.claude/
+app.log
+coordenadas.db

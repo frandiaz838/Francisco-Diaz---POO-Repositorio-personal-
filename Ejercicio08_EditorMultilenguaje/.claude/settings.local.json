@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git log *)",
+      "Bash(ls EditorMultilenguaje)",
+      "Read(//c/Qt/6.11.0/**)",
+      "Read(//c/Qt/Tools/**)",
+      "Bash(\"C:\\\\Qt\\\\Tools\\\\CMake_64\\\\bin\\\\cmake.exe\" --build .)",
+      "Bash(python -c \"import re; d=open\\('EditorPrincipal.cpp','rb'\\).read\\(\\); i=d.find\\(b'Sobre m'\\); print\\(repr\\(d[i:i+12]\\)\\); print\\('BOM' if d[:3]==b'\\\\xef\\\\xbb\\\\xbf' else 'no-BOM'\\)\")",
+      "PowerShell(cd \"C:\\\\Users\\\\octav\\\\OneDrive\\\\Escritorio\\\\UBP\\\\3ro\\\\POO\\\\Ejercicio08_EditorMultilenguaje\\\\EditorMultilenguaje\\\\build\"; & \"C:\\\\Qt\\\\Tools\\\\CMake_64\\\\bin\\\\cmake.exe\" --build . 2>&1 | Select-Object -Last 5; \"--- exe ---\"; \\(Get-Item .\\\\EditorMultilenguaje.exe\\).LastWriteTime)"
+    ]
+  }
+}

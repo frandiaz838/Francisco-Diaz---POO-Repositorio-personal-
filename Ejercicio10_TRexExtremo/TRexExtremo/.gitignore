@@ -1,0 +1,6 @@
+build/
+*.user
+*.autosave
+.qtc_clangd/
+.qtcreator/
+.claude/
